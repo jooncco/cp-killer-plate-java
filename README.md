@@ -1,2 +1,2 @@
-# cp-killer-plate-java
-Competitive programming tools for java users
+# cp-snippet-java
+Competitive programming code snippet for java users
