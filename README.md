@@ -1,4 +1,5 @@
 # cp-snippet-java
+
 Competitive programming code snippet for java users. Feel free to clone/fork/copy.  
 Make sure you hit the star⭐️ button if you like this snippet. You'll make my day.
 
@@ -16,7 +17,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         "body":[
             "import java.util.*;",
             "import java.io.*;",
-            
+
             "public class Main {",
                 "private static FastScanner sc = new FastScanner();",
 
@@ -27,7 +28,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                 "static class FastScanner {",
                     "BufferedReader br;",
                     "StringTokenizer st;",
-             
+
                     "public FastScanner()",
                     "{ try {br = new BufferedReader(",
                         "new FileReader(\"input.txt\"));",
@@ -35,7 +36,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "System.setOut(out);}",
                     "catch(Exception e) { br = new BufferedReader(new InputStreamReader(System.in));}",
                     "}",
-             
+
                     "String next()",
                     "{",
                         "while (st == null || !st.hasMoreElements()) {",
@@ -45,11 +46,11 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "}",
                         "return st.nextToken();",
                     "}",
-             
-                    "int nextInt() { return Integer.parseInt(next()); }",         
-                    "long nextLong() { return Long.parseLong(next()); }",         
+
+                    "int nextInt() { return Integer.parseInt(next()); }",
+                    "long nextLong() { return Long.parseLong(next()); }",
                     "double nextDouble() {return Double.parseDouble(next()); }",
-             
+
                     "String nextLine()",
                     "{",
                         "String str = \"\";",
@@ -62,7 +63,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "return str;",
                     "}",
                 "}",
-                
+
                 "public static void main(String[] args) {",
                     "StringBuilder sb= new StringBuilder();",
                     "int T= sc.nextInt();",
@@ -81,7 +82,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         "body":[
             "import java.util.*;",
             "import java.io.*;",
-            
+
             "public class Main {",
                 "private static FastScanner sc = new FastScanner();",
 
@@ -92,7 +93,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                 "static class FastScanner {",
                     "BufferedReader br;",
                     "StringTokenizer st;",
-             
+
                     "public FastScanner()",
                     "{ try {br = new BufferedReader(",
                         "new FileReader(\"input.txt\"));",
@@ -100,7 +101,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "System.setOut(out);}",
                     "catch(Exception e) { br = new BufferedReader(new InputStreamReader(System.in));}",
                     "}",
-             
+
                     "String next()",
                     "{",
                         "while (st == null || !st.hasMoreElements()) {",
@@ -110,11 +111,11 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "}",
                         "return st.nextToken();",
                     "}",
-             
-                    "int nextInt() { return Integer.parseInt(next()); }",         
-                    "long nextLong() { return Long.parseLong(next()); }",         
+
+                    "int nextInt() { return Integer.parseInt(next()); }",
+                    "long nextLong() { return Long.parseLong(next()); }",
                     "double nextDouble() {return Double.parseDouble(next()); }",
-             
+
                     "String nextLine()",
                     "{",
                         "String str = \"\";",
@@ -127,7 +128,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "return str;",
                     "}",
                 "}",
-                
+
                 "public static void main(String[] args) {",
                     "StringBuilder sb= new StringBuilder();",
                     "int T= sc.nextInt();",
@@ -142,18 +143,55 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         ],
         "description": "template for baekjoon online judge cp in java"
     },
-    "For loop":{
-        "prefix" : "forl",
-        "body" : [
-            "for(int i= 0; i < $0; i++)"
-        ]
+    "Next Permutation": {
+        "prefix": "permu",
+        "body": [
+            "static class Permu {",
+                "int[] nextPermutation(int[] arr) {",
+                    "int n = arr.length;",
+                    "int[] ret = new int[n];",
+                    "for (int i = 0; i < n; ++i)",
+                    "ret[i] = arr[i];",
+                    "int pivot = n - 1;",
+                    "while (pivot > 0 && ret[pivot - 1] >= ret[pivot])",
+                    "--pivot;",
+                    "if (pivot > 0) {",
+                        "--pivot;",
+                        "int idx = n - 1;",
+                        "while (ret[idx] <= ret[pivot])",
+                        "--idx;",
+                        "swap(ret, pivot, idx);",
+                        "reverse(ret, pivot + 1, n - 1);",
+                    "} else {",
+                        "Arrays.sort(ret);",
+                    "}",
+                    "return ret;",
+                "}",
+                "\n",
+                "void swap(int[] arr, int a, int b) {",
+                    "int tmp = arr[a];",
+                    "arr[a] = arr[b];",
+                    "arr[b] = tmp;",
+                "}",
+                "\n",
+                "void reverse(int[] arr, int l, int r) {",
+                    "int[] buf = new int[r - l + 1];",
+                    "for (int i = l; i <= r; ++i)",
+                        "buf[i - l] = arr[r - (i - l)];",
+                    "for (int i = 0; i < r - l + 1; ++i)",
+                        "arr[l + i] = buf[i];",
+                "}",
+            "}"
+        ],
+        "description": "next permutation implementation in java"
     }
 ```
 
 4. Try to use snippet inside the editor. Make sure you format the whole content.  
-It's ugly when it appears.
+   It's ugly when it appears.
 
-### FYI. Keyboard shortcut for auto-format  
+### FYI. Keyboard shortcut for auto-format
+
 - Mac: `opt` + `shift` + `F`
 - Windows: `alt` + `shift` + `F`
 
