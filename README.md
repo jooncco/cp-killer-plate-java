@@ -9,7 +9,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
 
 2. Go to `Settings` > `User Snippet` > `java.json`
 
-3. Paste below inside `java.json`
+3. Paste below key-value's into `java.json`
 
 ```json
     "Template for codeforces CP" : {
@@ -143,6 +143,13 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         ],
         "description": "template for baekjoon online judge cp in java"
     },
+    "For loop": {
+        "prefix": "forl",
+        "body": [
+            "for (int i= 0; i < $0; ++i)"
+        ],
+        "description": "simple for loop"
+    },
     "Next Permutation": {
         "prefix": "permu",
         "body": [
@@ -184,6 +191,59 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
             "}"
         ],
         "description": "next permutation implementation in java"
+    },
+    "Trie": {
+        "prefix": "trie",
+        "body": [
+            "static class TrieNode {",
+                "char val;",
+                "boolean exist;",
+                "Map<Character, TrieNode> children;",
+                "\n",
+                "TrieNode(char val) {",
+                    "this.val = val;",
+                    "children = new HashMap<>();",
+                "}",
+                "\n",
+                "char getVal() {",
+                    "return val;",
+                "}",
+                "\n",
+                "void setVal(char val) {",
+                    "this.val = val;",
+                "}",
+                "\n",
+                "void addChild(TrieNode node) {",
+                    "children.put(node.getVal(), node);",
+                "}",
+                "\n",
+                "TrieNode getChild(char c) {",
+                    "return children.get(c);",
+                "}",
+                "\n",
+                "boolean findWord(String word) {",
+                    "if (word.length() == 0)",
+                        "return exist;",
+                    "if (!children.containsKey(word.charAt(0)))",
+                        "return false;",
+                    "return children.get(word.charAt(0)).findWord(word.substring(1));",
+                "}",
+                "\n",
+                "void addWord(String word) {",
+                    "if (word.length() == 0) {",
+                        "exist = true;",
+                        "return;",
+                    "}",
+                    "TrieNode child = children.get(word.charAt(0));",
+                    "if (child == null) {",
+                        "addChild(new TrieNode(word.charAt(0)));",
+                        "child = children.get(word.charAt(0));",
+                    "}",
+                    "child.addWord(word.substring(1));",
+                "}",
+            "}"
+        ],
+        "description": "trie data structure"
     }
 ```
 

@@ -4,18 +4,14 @@
     "body": [
       "import java.util.*;",
       "import java.io.*;",
-
       "public class Main {",
       "private static FastScanner sc = new FastScanner();",
-
       "private static String solve() {",
       "return \"\";$0",
       "}",
-
       "static class FastScanner {",
       "BufferedReader br;",
       "StringTokenizer st;",
-
       "public FastScanner()",
       "{ try {br = new BufferedReader(",
       "new FileReader(\"input.txt\"));",
@@ -23,7 +19,6 @@
       "System.setOut(out);}",
       "catch(Exception e) { br = new BufferedReader(new InputStreamReader(System.in));}",
       "}",
-
       "String next()",
       "{",
       "while (st == null || !st.hasMoreElements()) {",
@@ -33,11 +28,9 @@
       "}",
       "return st.nextToken();",
       "}",
-
       "int nextInt() { return Integer.parseInt(next()); }",
       "long nextLong() { return Long.parseLong(next()); }",
       "double nextDouble() {return Double.parseDouble(next()); }",
-
       "String nextLine()",
       "{",
       "String str = \"\";",
@@ -50,7 +43,6 @@
       "return str;",
       "}",
       "}",
-
       "public static void main(String[] args) {",
       "StringBuilder sb= new StringBuilder();",
       "int T= sc.nextInt();",
@@ -69,18 +61,14 @@
     "body": [
       "import java.util.*;",
       "import java.io.*;",
-
       "public class Main {",
       "private static FastScanner sc = new FastScanner();",
-
       "private static String solve() {",
       "return \"\";$0",
       "}",
-
       "static class FastScanner {",
       "BufferedReader br;",
       "StringTokenizer st;",
-
       "public FastScanner()",
       "{ try {br = new BufferedReader(",
       "new FileReader(\"input.txt\"));",
@@ -88,7 +76,6 @@
       "System.setOut(out);}",
       "catch(Exception e) { br = new BufferedReader(new InputStreamReader(System.in));}",
       "}",
-
       "String next()",
       "{",
       "while (st == null || !st.hasMoreElements()) {",
@@ -98,11 +85,9 @@
       "}",
       "return st.nextToken();",
       "}",
-
       "int nextInt() { return Integer.parseInt(next()); }",
       "long nextLong() { return Long.parseLong(next()); }",
       "double nextDouble() {return Double.parseDouble(next()); }",
-
       "String nextLine()",
       "{",
       "String str = \"\";",
@@ -115,7 +100,6 @@
       "return str;",
       "}",
       "}",
-
       "public static void main(String[] args) {",
       "StringBuilder sb= new StringBuilder();",
       "int T= sc.nextInt();",
@@ -129,6 +113,12 @@
       "}"
     ],
     "description": "template for baekjoon online judge cp in java"
+  },
+  "For loop": {
+    "prefix": "forl",
+    "body": [
+      "for (int i= 0; i < $0; ++i)"
+    ]
   },
   "Next Permutation": {
     "prefix": "permu",
@@ -169,6 +159,60 @@
       "arr[l + i] = buf[i];",
       "}",
       "}"
-    ]
+    ],
+    "description": "next permutation implementation in java"
+  },
+  "Trie": {
+    "prefix": "trie",
+    "body": [
+      "static class TrieNode {",
+      "char val;",
+      "boolean exist;",
+      "Map<Character, TrieNode> children;",
+      "\n",
+      "TrieNode(char val) {",
+      "this.val = val;",
+      "children = new HashMap<>();",
+      "}",
+      "\n",
+      "char getVal() {",
+      "return val;",
+      "}",
+      "\n",
+      "void setVal(char val) {",
+      "this.val = val;",
+      "}",
+      "\n",
+      "void addChild(TrieNode node) {",
+      "children.put(node.getVal(), node);",
+      "}",
+      "\n",
+      "TrieNode getChild(char c) {",
+      "return children.get(c);",
+      "}",
+      "\n",
+      "boolean findWord(String word) {",
+      "if (word.length() == 0)",
+      "return exist;",
+      "if (!children.containsKey(word.charAt(0)))",
+      "return false;",
+      "return children.get(word.charAt(0)).findWord(word.substring(1));",
+      "}",
+      "\n",
+      "void addWord(String word) {",
+      "if (word.length() == 0) {",
+      "exist = true;",
+      "return;",
+      "}",
+      "TrieNode child = children.get(word.charAt(0));",
+      "if (child == null) {",
+      "addChild(new TrieNode(word.charAt(0)));",
+      "child = children.get(word.charAt(0));",
+      "}",
+      "child.addWord(word.substring(1));",
+      "}",
+      "}"
+    ],
+    "description": "trie data structure"
   }
 }
