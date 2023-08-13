@@ -21,57 +21,57 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
             "public class Main {",
                 "private static FastScanner sc = new FastScanner();",
 
-                "private static String solve() {",
-                    "return \"\";$0",
+                "private static void solve() {",
+                    "$0",
                 "}",
 
                 "static class FastScanner {",
                     "BufferedReader br;",
                     "StringTokenizer st;",
 
-                    "public FastScanner()",
-                    "{ try {br = new BufferedReader(",
-                        "new FileReader(\"input.txt\"));",
-                        "PrintStream out = new PrintStream(new FileOutputStream(\"output.txt\"));",
-                        "System.setOut(out);}",
-                    "catch(Exception e) { br = new BufferedReader(new InputStreamReader(System.in));}",
+                    "public FastScanner() {",
+                        "try {",
+                            "br = new BufferedReader(new FileReader(\"input.txt\"));",
+                            "PrintStream out = new PrintStream(new FileOutputStream(\"output.txt\"));",
+                            "System.setOut(out);",
+                        "} catch(Exception e) {",
+                            "br = new BufferedReader(new InputStreamReader(System.in));",
+                        "}",
                     "}",
-
-                    "String next()",
-                    "{",
+                    "String next() {",
                         "while (st == null || !st.hasMoreElements()) {",
-                            "try {st = new StringTokenizer(br.readLine());}",
-                            "catch (IOException e) {",
-                                "e.printStackTrace();}",
+                            "try {",
+                                "st = new StringTokenizer(br.readLine());",
+                            "} catch (IOException e) {",
+                                "e.printStackTrace();",
+                            "}",
                         "}",
                         "return st.nextToken();",
                     "}",
 
-                    "int nextInt() { return Integer.parseInt(next()); }",
-                    "long nextLong() { return Long.parseLong(next()); }",
-                    "double nextDouble() {return Double.parseDouble(next()); }",
-
-                    "String nextLine()",
-                    "{",
+                    "String nextLine() {",
                         "String str = \"\";",
                         "try {",
-                        "str = br.readLine();",
-                        "}",
-                        "catch (IOException e) {",
+                            "str = br.readLine();",
+                        "} catch (IOException e) {",
                             "e.printStackTrace();",
                         "}",
                         "return str;",
                     "}",
+                    
+                    "int nextInt() { return Integer.parseInt(next()); }",
+                    
+                    "long nextLong() { return Long.parseLong(next()); }",
+                    
+                    "double nextDouble() { return Double.parseDouble(next()); }",
                 "}",
 
                 "public static void main(String[] args) {",
-                    "StringBuilder sb= new StringBuilder();",
-                    "int T= sc.nextInt();",
-                    "for (int t=1; t <= T; ++t) {",
-                        "if (t > 1) sb.append(\"\\n\");",
-                        "sb.append(solve());",
+                    "int T = sc.nextInt();",
+                    "for (int t = 1; t <= T; ++t) {",
+                        "if (t > 1) System.out.println();",
+                        "solve();",
                     "}",
-                    "System.out.print(sb);",
                 "}",
             "}"
         ],
@@ -86,58 +86,58 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
             "public class Main {",
                 "private static FastScanner sc = new FastScanner();",
 
-                "private static String solve() {",
-                    "return \"\";$0",
+                "private static void solve() {",
+                    "$0",
                 "}",
 
                 "static class FastScanner {",
                     "BufferedReader br;",
                     "StringTokenizer st;",
 
-                    "public FastScanner()",
-                    "{ try {br = new BufferedReader(",
-                        "new FileReader(\"input.txt\"));",
-                        "PrintStream out = new PrintStream(new FileOutputStream(\"output.txt\"));",
-                        "System.setOut(out);}",
-                    "catch(Exception e) { br = new BufferedReader(new InputStreamReader(System.in));}",
+                    "public FastScanner() {",
+                        "try {",
+                            "br = new BufferedReader(new FileReader(\"input.txt\"));",
+                            "PrintStream out = new PrintStream(new FileOutputStream(\"output.txt\"));",
+                            "System.setOut(out);",
+                        "} catch(Exception e) {",
+                            "br = new BufferedReader(new InputStreamReader(System.in));",
+                        "}",
                     "}",
-
-                    "String next()",
-                    "{",
+                    "String next() {",
                         "while (st == null || !st.hasMoreElements()) {",
-                            "try {st = new StringTokenizer(br.readLine());}",
-                            "catch (IOException e) {",
-                                "e.printStackTrace();}",
+                            "try {",
+                                "st = new StringTokenizer(br.readLine());",
+                            "} catch (IOException e) {",
+                                "e.printStackTrace();",
+                            "}",
                         "}",
                         "return st.nextToken();",
                     "}",
 
-                    "int nextInt() { return Integer.parseInt(next()); }",
-                    "long nextLong() { return Long.parseLong(next()); }",
-                    "double nextDouble() {return Double.parseDouble(next()); }",
-
-                    "String nextLine()",
-                    "{",
+                    "String nextLine() {",
                         "String str = \"\";",
                         "try {",
-                        "str = br.readLine();",
-                        "}",
-                        "catch (IOException e) {",
+                            "str = br.readLine();",
+                        "} catch (IOException e) {",
                             "e.printStackTrace();",
                         "}",
                         "return str;",
                     "}",
+                    
+                    "int nextInt() { return Integer.parseInt(next()); }",
+                    
+                    "long nextLong() { return Long.parseLong(next()); }",
+                    
+                    "double nextDouble() { return Double.parseDouble(next()); }",
                 "}",
 
                 "public static void main(String[] args) {",
-                    "StringBuilder sb= new StringBuilder();",
-                    "int T= sc.nextInt();",
-                    "for (int t=1; t <= T; ++t) {",
-                        "if (t > 1) sb.append(\"\\n\");",
-                        "sb.append(\"Case #\" + t + \": \");",
-                        "sb.append(solve());",
+                    "int T = sc.nextInt();",
+                    "for (int t = 1; t <= T; ++t) {",
+                        "if (t > 1) System.out.println();",
+                        "System.out.print(\"Case #\" + t + \": \");",
+                        "solve();",
                     "}",
-                    "System.out.print(sb);",
                 "}",
             "}"
         ],
@@ -174,13 +174,13 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                     "}",
                     "return ret;",
                 "}",
-                "\n",
+                
                 "void swap(int[] arr, int a, int b) {",
                     "int tmp = arr[a];",
                     "arr[a] = arr[b];",
                     "arr[b] = tmp;",
                 "}",
-                "\n",
+                
                 "void reverse(int[] arr, int l, int r) {",
                     "int[] buf = new int[r - l + 1];",
                     "for (int i = l; i <= r; ++i)",
@@ -199,28 +199,28 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                 "char val;",
                 "boolean exist;",
                 "Map<Character, TrieNode> children;",
-                "\n",
+                
                 "TrieNode(char val) {",
                     "this.val = val;",
                     "children = new HashMap<>();",
                 "}",
-                "\n",
+                
                 "char getVal() {",
                     "return val;",
                 "}",
-                "\n",
+                
                 "void setVal(char val) {",
                     "this.val = val;",
                 "}",
-                "\n",
+                
                 "void addChild(TrieNode node) {",
                     "children.put(node.getVal(), node);",
                 "}",
-                "\n",
+                
                 "TrieNode getChild(char c) {",
                     "return children.get(c);",
                 "}",
-                "\n",
+                
                 "boolean findWord(String word) {",
                     "if (word.length() == 0)",
                         "return exist;",
@@ -228,7 +228,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                         "return false;",
                     "return children.get(word.charAt(0)).findWord(word.substring(1));",
                 "}",
-                "\n",
+                
                 "void addWord(String word) {",
                     "if (word.length() == 0) {",
                         "exist = true;",
@@ -252,7 +252,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
 
 ### FYI. Keyboard shortcut for auto-format
 
-- Mac: `opt` + `shift` + `F`
+- Mac: `⌥` + `⇧` + `F`
 - Windows: `alt` + `shift` + `F`
 
 ## Template Preview
@@ -268,8 +268,8 @@ import java.io.*;
 public class Main {
     private static FastScanner sc = new FastScanner();
 
-    private static String solve() {
-        return "";
+    private static void solve() {
+
     }
 
     static class FastScanner {
@@ -278,8 +278,7 @@ public class Main {
 
         public FastScanner() {
             try {
-                br = new BufferedReader(
-                        new FileReader("input.txt"));
+                br = new BufferedReader(new FileReader("input.txt"));
                 PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
                 System.setOut(out);
             } catch (Exception e) {
@@ -298,6 +297,16 @@ public class Main {
             return st.nextToken();
         }
 
+        String nextLine() {
+            String str = "";
+            try {
+                str = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
         int nextInt() {
             return Integer.parseInt(next());
         }
@@ -309,27 +318,15 @@ public class Main {
         double nextDouble() {
             return Double.parseDouble(next());
         }
-
-        String nextLine() {
-            String str = "";
-            try {
-                str = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str;
-        }
     }
 
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
         int T = sc.nextInt();
         for (int t = 1; t <= T; ++t) {
             if (t > 1)
-                sb.append("\n");
-            sb.append(solve());
+                System.out.println();
+            solve();
         }
-        System.out.print(sb);
     }
 }
 ```
@@ -345,8 +342,8 @@ import java.io.*;
 public class Main {
     private static FastScanner sc = new FastScanner();
 
-    private static String solve() {
-        return "";
+    private static void solve() {
+
     }
 
     static class FastScanner {
@@ -355,8 +352,7 @@ public class Main {
 
         public FastScanner() {
             try {
-                br = new BufferedReader(
-                        new FileReader("input.txt"));
+                br = new BufferedReader(new FileReader("input.txt"));
                 PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
                 System.setOut(out);
             } catch (Exception e) {
@@ -375,6 +371,16 @@ public class Main {
             return st.nextToken();
         }
 
+        String nextLine() {
+            String str = "";
+            try {
+                str = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
         int nextInt() {
             return Integer.parseInt(next());
         }
@@ -386,28 +392,16 @@ public class Main {
         double nextDouble() {
             return Double.parseDouble(next());
         }
-
-        String nextLine() {
-            String str = "";
-            try {
-                str = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str;
-        }
     }
 
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
         int T = sc.nextInt();
         for (int t = 1; t <= T; ++t) {
             if (t > 1)
-                sb.append("\n");
-            sb.append("Case #" + t + ": ");
-            sb.append(solve());
+                System.out.println();
+            System.out.print("Case #" + t + ": ");
+            solve();
         }
-        System.out.print(sb);
     }
 }
 ```
