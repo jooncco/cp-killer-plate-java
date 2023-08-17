@@ -150,6 +150,20 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         ],
         "description": "simple for loop"
     },
+    "Print": {
+        "prefix": "print",
+        "body": [
+            "System.out.print($0);"
+        ],
+        "description": "simple print method"
+    },
+    "Print Line": {
+        "prefix": "printl",
+        "body": [
+            "System.out.println($0);"
+        ],
+        "description": "simple print line method"
+    },
     "Next Permutation": {
         "prefix": "permu",
         "body": [
