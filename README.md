@@ -146,7 +146,8 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
     "For loop": {
         "prefix": "forl",
         "body": [
-            "for (int i= 0; i < $0; ++i)"
+            "for (int i= 0; i < $0; ++i) {",
+            "}"
         ],
         "description": "simple for loop"
     },
