@@ -143,11 +143,32 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         ],
         "description": "template for baekjoon online judge cp in java"
     },
-    "For loop": {
-        "prefix": "forl",
+    "For loop i": {
+        "prefix": "fori",
         "body": [
             "for (int i= 0; i < $0; ++i) {",
             "}"
+        ],
+        "description": "simple for loop"
+    },
+    "For loop j": {
+        "prefix": "forj",
+        "body": [
+            "for (int j= 0; j < $0; ++j)"
+        ],
+        "description": "simple for loop"
+    },
+    "For loop k": {
+        "prefix": "fork",
+        "body": [
+            "for (int k= 0; k < $0; ++k)"
+        ],
+        "description": "simple for loop"
+    },
+    "For loop l": {
+        "prefix": "forl",
+        "body": [
+            "for (int l= 0; l < $0; ++l)"
         ],
         "description": "simple for loop"
     },
@@ -259,6 +280,64 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
             "}"
         ],
         "description": "trie data structure"
+    },
+    "Prime Utils": {
+        "prefix": "primeutil",
+        "body": [
+            "static class PrimeUtil {",
+                "static Map<Integer, List<Integer>> factors(int upTo) {",
+                    "Map<Integer, List<Integer>> p = new HashMap<>();",
+                    "p.put(1, new ArrayList<>());",
+                    "for (int i = 2; i <= upTo; ++i) {",
+                        "if (!p.containsKey(i)) {",
+                            "for (int j = i; j <= upTo; j += i) {",
+                                "p.computeIfAbsent(j, primes -> new ArrayList<>()).add(i);",
+                            "}",
+                        "}",
+                    "}",
+                    "return p;",
+                "}",
+
+                "static int countPrimeFactors(long num) {",
+                    "if (num == 1) return 0;",
+                    "int cnt= 0;",
+                    "for (int i=2; i*i <= num; ++i) {",
+                        "if (num%i == 0) {",
+                            "++cnt;",
+                            "while (num%i == 0) num /= i;",
+                        "}",
+                    "}",
+                    "return num > 1 ? cnt+1 : cnt;",
+                "}",
+
+                "static boolean isPrime(long num) {",
+                    "return countPrimeFactors(num) == 1;",
+                "}",
+            "}"
+        ],
+        "description": "factorization using sieve of Eratosthenes"
+    },
+    "Modular Utils": {
+        "prefix": "modutil",
+        "body": [
+            "private static final int MOD= (int)1e9+7;",
+
+            "private static int add(int a, int b) { return (int)((a+0L+b)%MOD); }",
+
+            "private static int mul(int a, int b) { return (int)(a*1L*b%MOD); }",
+
+            "private static int inv(int a) { return binEx(a, MOD-2); }",
+
+            "private static int div(int a, int b) { return mul(a, inv(b)); }",
+
+            "private static int binEx(int a, int x) {",
+                "if (x == 0) return 1;",
+                "int p= binEx(a, x/2);",
+                "p= mul(p, p);",
+                "return x%2 == 1 ? mul(p,a) : p;",
+            "}"
+        ],
+        "description": "modular embedded basic operations"
     }
 ```
 
