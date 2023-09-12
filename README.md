@@ -382,6 +382,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
                             "else ++i;",
                         "}",
                     "}",
+                    "if (len == n) ret.add(i-n);",
                     "return ret;",
                 "}",
             "}"

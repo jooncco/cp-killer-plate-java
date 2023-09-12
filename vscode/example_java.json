@@ -369,6 +369,7 @@
                             "else ++i;",
                         "}",
                     "}",
+                    "if (len == n) ret.add(i-n);",
                     "return ret;",
                 "}",
             "}"
