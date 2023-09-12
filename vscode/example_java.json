@@ -319,9 +319,9 @@
 
             "private static int binEx(int a, int x) {",
                 "if (x == 0) return 1;",
-                "int p= binEx(a, x/2);",
+                "int p= binEx(a, x>>1);",
                 "p= mul(p, p);",
-                "return x%2 == 1 ? mul(p,a) : p;",
+                "return (x&1) == 1 ? mul(p,a) : p;",
             "}"
         ],
         "description": "modular embedded basic operations"
@@ -358,7 +358,6 @@
                     "while (i < text.length()) {",
                         "if (len == n) {",
                             "ret.add(i-n);",
-                            "++i;",
                             "len= lps[len-1];",
                             "continue;",
                         "}",
