@@ -173,6 +173,30 @@
         ],
         "description": "simple print line method"
     },
+    "Union Find": {
+        "prefix": "unionfind",
+        "body": [
+            "static class UnionFind {",
+                "int[] group;",
+
+                "UnionFind(int n) {",
+                    "group= new int[n+1];",
+                    "for (int i=1; i <= n; ++i) {",
+                        "group[i]= i;",
+                    "}",
+                "}",
+
+                "int find(int i) {",
+                    "if (group[i] == i) return i;",
+                    "return group[i]= find(group[i]);",
+                "}",
+
+                "void union(int a, int b) {",
+                    "group[b]= find(a);",
+                "}",
+            "}"
+        ]
+    },
     "Next Permutation": {
         "prefix": "permu",
         "body": [
