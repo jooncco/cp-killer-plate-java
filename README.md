@@ -19,7 +19,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
             "import java.io.*;",
 
             "public class Main {",
-                "private static FastScanner sc = new FastScanner();",
+                "private static final FastScanner sc = new FastScanner();",
 
                 "private static void solve() {",
                     "$0",
@@ -84,7 +84,7 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
             "import java.io.*;",
 
             "public class Main {",
-                "private static FastScanner sc = new FastScanner();",
+                "private static final FastScanner sc = new FastScanner();",
 
                 "private static void solve() {",
                     "$0",
@@ -434,7 +434,7 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    private static FastScanner sc = new FastScanner();
+    private static final FastScanner sc = new FastScanner();
 
     private static void solve() {
 
@@ -508,7 +508,7 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    private static FastScanner sc = new FastScanner();
+    private static final FastScanner sc = new FastScanner();
 
     private static void solve() {
 

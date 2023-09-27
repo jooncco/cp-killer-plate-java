@@ -6,7 +6,7 @@
             "import java.io.*;",
 
             "public class Main {",
-                "private static FastScanner sc = new FastScanner();",
+                "private static final FastScanner sc = new FastScanner();",
 
                 "private static void solve() {",
                     "$0",
@@ -71,7 +71,7 @@
             "import java.io.*;",
 
             "public class Main {",
-                "private static FastScanner sc = new FastScanner();",
+                "private static final FastScanner sc = new FastScanner();",
 
                 "private static void solve() {",
                     "$0",
