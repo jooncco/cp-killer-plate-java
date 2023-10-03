@@ -362,6 +362,24 @@ Make sure you hit the star⭐️ button if you like this snippet. You'll make my
         ],
         "description": "modular embedded basic operations"
     },
+    "Number Utils": {
+        "prefix": "numberutil",
+        "body": [
+            "private static int gcd(int a, int b) {",
+                "if (a < b) return gcd(b,a);",
+                "while (b > 0) {",
+                    "int tmp= a%b;",
+                    "a= b;",
+                    "b= tmp;",
+                "}",
+                "return a;",
+            "}",
+        
+            "private static int lcm(int a, int b) {",
+                "return (int)(a*1L*b/gcd(a,b));",
+            "}"
+        ]
+    },
     "KMP Algorithm": {
         "prefix": "kmp",
         "body": [
