@@ -332,19 +332,19 @@
         "body": [
             "private static final int MOD= (int)1e9+7;",
 
-            "private static int add(int a, int b) { return (int)((a+0L+b)%MOD); }",
+            "private static int _add(int a, int b) { return (int)((a+0L+b)%MOD); }",
 
-            "private static int mul(int a, int b) { return (int)(a*1L*b%MOD); }",
+            "private static int _mul(int a, int b) { return (int)(a*1L*b%MOD); }",
 
-            "private static int inv(int a) { return binEx(a, MOD-2); }",
+            "private static int _inv(int a) { return binEx(a, MOD-2); }",
 
-            "private static int div(int a, int b) { return mul(a, inv(b)); }",
+            "private static int _div(int a, int b) { return _mul(a, _inv(b)); }",
 
             "private static int binEx(int a, int x) {",
                 "if (x == 0) return 1;",
                 "int p= binEx(a, x>>1);",
-                "p= mul(p, p);",
-                "return (x&1) == 1 ? mul(p,a) : p;",
+                "p= _mul(p, p);",
+                "return (x&1) == 1 ? _mul(p,a) : p;",
             "}"
         ],
         "description": "modular embedded basic operations"
